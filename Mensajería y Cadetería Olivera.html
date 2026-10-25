@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mensajería y Cadetería Olivera · Santiago del Estero</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#F3FAFE;--surface:#fff;--ink:#0E2A3D;--muted:#4A6577;--sky:#3AA7DF;--deep:#0B6296;--pale:#DDF1FB;--line:#CFE6F3;--wa:#17803F;--wa-ink:#fff;
+--h:"Baloo 2","Trebuchet MS",system-ui,sans-serif;--b:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0A1822;--surface:#102331;--ink:#E9F5FC;--muted:#9DB6C6;--sky:#5BBDEE;--deep:#7CCBF3;--pale:#14303F;--line:#1F3D50;--wa:#2FB963;--wa-ink:#062312}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0A1822;--surface:#102331;--ink:#E9F5FC;--muted:#9DB6C6;--sky:#5BBDEE;--deep:#7CCBF3;--pale:#14303F;--line:#1F3D50;--wa:#2FB963;--wa-ink:#062312}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0}
+.logo{font:800 20px/1.1 var(--h);text-decoration:none;color:var(--deep)}
+.logo small{display:block;font:600 13px var(--b);color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;background:var(--wa);color:var(--wa-ink);font:700 17px/1 var(--h);padding:15px 24px;border-radius:999px;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:var(--surface);color:var(--deep);border:2px solid var(--sky)}
+.btn.sm{font-size:15px;padding:11px 18px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:28px 0 56px}
+h1{font:800 clamp(36px,6.5vw,60px)/1.05 var(--h);margin:0 0 16px;color:var(--ink)}
+.lead{color:var(--muted);font-size:19px;margin:0 0 24px;max-width:30em}
+.pill{display:inline-block;background:var(--pale);color:var(--deep);font:700 14px var(--b);padding:6px 14px;border-radius:999px;margin-bottom:16px}
+.hero svg{width:100%;height:auto}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(26px,4vw,38px)/1.1 var(--h);margin:0 0 10px;color:var(--ink)}
+.sub{color:var(--muted);margin:0 0 26px;max-width:36em}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font:700 20px/1.2 var(--h);margin:0 0 6px;color:var(--deep)}
+.card p{margin:0;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:54px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--sky);color:#06293E;font:800 19px/38px var(--h);text-align:center}
+.steps h3{font:700 19px/1.2 var(--h);margin:0 0 4px}.steps p{margin:0;color:var(--muted)}
+.hours{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.hours .card strong{display:block;font:800 26px/1.1 var(--h);color:var(--ink);margin-top:4px}
+.quote{background:var(--pale);border-radius:20px;padding:28px}
+.fields{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+.fields .full{grid-column:1/-1}
+label{display:block;font:700 15px var(--b);margin-bottom:5px}
+input,select,textarea{width:100%;font:400 16px var(--b);color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:12px}
+textarea{min-height:84px;resize:vertical}
+.biz{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.biz ul{margin:0 0 20px;padding-left:20px;color:var(--muted)}
+.soon{border:2px dashed var(--sky);border-radius:16px;padding:22px;background:var(--surface)}
+.soon h3{font:700 20px var(--h);margin:0 0 6px;color:var(--deep)}.soon p{margin:0;color:var(--muted)}
+.contact{text-align:center;background:var(--deep);color:#fff;border-radius:22px;padding:44px 22px;margin:8px 0 48px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact{background:#0F3B56;color:var(--ink)}}
+:root[data-theme="dark"] .contact{background:#0F3B56;color:var(--ink)}
+.contact h2{color:inherit}.contact p{margin:0 auto 20px;max-width:30em}
+.num{display:inline-block;background:rgba(255,255,255,.15);border:2px dashed rgba(255,255,255,.6);border-radius:12px;padding:10px 18px;font:700 22px var(--h);margin-bottom:20px}
+footer{padding:0 0 36px;color:var(--muted);font-size:14px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+@media (max-width:760px){.hero,.biz{grid-template-columns:1fr}.g2,.g3,.hours,.fields{grid-template-columns:1fr}.hero{padding-top:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#">Mensajería y Cadetería Olivera<small>Santiago del Estero, Argentina</small></a>
+  <a class="btn sm wa" data-msg="Hola, quiero hacer una consulta.">WhatsApp</a>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <span class="pill">Atención de lunes a domingo</span>
+    <h1>Mensajería rápida, responsable y segura.</h1>
+    <p class="lead">Retiramos y entregamos tus paquetes, trámites y mandados en moto. Para particulares, comercios y empresas.</p>
+    <a class="btn wa" data-msg="Hola, quiero pedir un servicio de mensajería.">Pedir por WhatsApp</a>
+  </div>
+  <svg viewBox="0 0 420 300" role="img" aria-label="Cadete en moto con caja de entregas">
+    <rect x="0" y="0" width="420" height="300" rx="24" fill="var(--pale)"/>
+    <circle cx="330" cy="70" r="34" fill="#fff" opacity=".8"/>
+    <path d="M0 250h420" stroke="var(--sky)" stroke-width="4" stroke-dasharray="14 12"/>
+    <g stroke="var(--ink)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <circle cx="120" cy="215" r="34" fill="var(--surface)"/><circle cx="300" cy="215" r="34" fill="var(--surface)"/>
+      <path d="M120 215 L170 160 L255 160 L300 215"/><path d="M170 160 L150 130 H125"/><path d="M255 160 L285 125 L305 130"/>
+      <path d="M190 160 L215 215 H245"/>
+    </g>
+    <rect x="175" y="140" width="85" height="22" rx="8" fill="var(--deep)"/>
+    <rect x="95" y="80" width="80" height="62" rx="10" fill="var(--sky)"/><path d="M95 108h80M135 80v62" stroke="#fff" stroke-width="5"/>
+    <g fill="var(--deep)"><circle cx="228" cy="88" r="17"/><path d="M212 108h34l12 34-26 18h-26l-12-24z"/></g>
+    <path d="M238 112 L292 128" stroke="var(--deep)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="228" cy="86" r="19" fill="none" stroke="var(--ink)" stroke-width="5"/>
+  </svg>
+</div>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <p class="sub">Un servicio atento y directo, coordinado por WhatsApp.</p>
+  <div class="grid g3">
+    <div class="card"><h3>Mensajería urbana</h3><p>Envíos dentro de la ciudad, con retiro y entrega.</p></div>
+    <div class="card"><h3>Cadetería y mandados</h3><p>Trámites, compras y encargos que no podés hacer vos.</p></div>
+    <div class="card"><h3>Retiro y entrega de paquetes</h3><p>Pasamos a buscar y llevamos hasta la puerta del destino.</p></div>
+    <div class="card"><h3>Entregas en el día</h3><p>Según disponibilidad. Consultanos por WhatsApp.</p></div>
+    <div class="card"><h3>Atención personalizada</h3><p>Hablás directo con nosotros, sin intermediarios.</p></div>
+    <div class="card"><h3>Comercios y empresas</h3><p>Entregas habituales para tu negocio.</p></div>
+  </div>
+</section>
+
+<section id="horarios">
+  <h2>Horarios de atención</h2>
+  <div class="hours">
+    <div class="card">Lunes a sábados<strong>8:00 a 00:00</strong><p>Horario corrido</p></div>
+    <div class="card">Domingos<strong>8:00 a 15:00</strong></div>
+  </div>
+</section>
+
+<section id="como">
+  <h2>Cómo funcionan los retiros y entregas</h2>
+  <p class="sub">Todo se coordina por WhatsApp antes de salir.</p>
+  <ol class="steps grid g2">
+    <li><h3>Nos escribís</h3><p>Contanos qué hay que llevar, dónde se retira y dónde se entrega.</p></li>
+    <li><h3>Coordinamos el presupuesto</h3><p>Según la distancia y el tipo de servicio, te confirmamos el valor.</p></li>
+    <li><h3>Retiramos</h3><p>Pasamos por el punto de retiro en el horario acordado.</p></li>
+    <li><h3>Entregamos</h3><p>Llevamos el pedido al destino y te avisamos cuando está entregado.</p></li>
+  </ol>
+</section>
+
+<section id="presupuesto">
+  <div class="quote">
+    <h2>Pedí tu presupuesto</h2>
+    <p class="sub" style="margin-bottom:0">Completá los datos y se arma el mensaje para enviarnos por WhatsApp. El valor depende de la distancia y el tipo de servicio.</p>
+    <div class="fields">
+      <div><label for="tipo">Tipo de servicio</label>
+        <select id="tipo"><option>Mensajería urbana</option><option>Cadetería / mandado</option><option>Retiro y entrega de paquete</option><option>Entrega en el día</option><option>Servicio para empresa</option></select></div>
+      <div><label for="nombre">Tu nombre</label><input id="nombre" autocomplete="name"></div>
+      <div><label for="desde">Dirección de retiro</label><input id="desde" placeholder="Calle, número, barrio"></div>
+      <div><label for="hasta">Dirección de entrega</label><input id="hasta" placeholder="Calle, número, barrio"></div>
+      <div class="full"><label for="det">Detalles (qué se envía, horario, etc.)</label><textarea id="det"></textarea></div>
+    </div>
+    <button class="btn" id="enviar" type="button">Pedir presupuesto por WhatsApp</button>
+  </div>
+</section>
+
+<section id="empresas">
+  <div class="biz">
+    <div>
+      <h2>Para comercios y empresas</h2>
+      <p class="sub">Si tu negocio hace entregas todas las semanas, armamos un servicio habitual a tu medida.</p>
+      <ul><li>Entregas regulares a clientes</li><li>Retiro de pedidos en tu local</li><li>Atención directa y seguimiento por WhatsApp</li></ul>
+      <a class="btn wa" data-msg="Hola, tengo un comercio/empresa y quiero consultar por un servicio de entregas habituales.">Consultar para mi empresa</a>
+    </div>
+    <div class="soon">
+      <h3>Próximamente</h3>
+      <p>Comprobante digital de cada envío y códigos de retiro y entrega para confirmar cada paquete. Esta sección está preparada para sumarlos.</p>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contacto">
+  <h2>Escribinos por WhatsApp</h2>
+  <p>Atendemos de lunes a sábados de 8:00 a 00:00 y domingos de 8:00 a 15:00.</p>
+  <div class="num" id="numtxt">Número de WhatsApp: completar</div><br>
+  <a class="btn wa" data-msg="Hola, quiero hacer una consulta.">Abrir WhatsApp</a>
+</div>
+</main>
+<footer>© Mensajería y Cadetería Olivera · Santiago del Estero, Argentina</footer>
+</div>
+<a class="btn fab wa" data-msg="Hola, quiero hacer una consulta.">WhatsApp</a>
+
+<script>
+/* ===== COMPLETAR AQUÍ TU NÚMERO DE WHATSAPP =====
+   Formato para Argentina: 549 + código de área sin 0 + número sin 15.
+   Ejemplo con datos de relleno: "5493850000000". Si lo dejás vacío, el botón abre WhatsApp sin número. */
+var WHATSAPP = "";
+
+function link(msg){
+  var n = WHATSAPP.replace(/\D/g,"");
+  return "https://wa.me/" + n + "?text=" + encodeURIComponent(msg);
+}
+document.querySelectorAll("a.wa").forEach(function(a){
+  a.href = link(a.getAttribute("data-msg")); a.target = "_blank"; a.rel = "noopener";
+});
+if (WHATSAPP) { document.getElementById("numtxt").textContent = "WhatsApp: +" + WHATSAPP.replace(/\D/g,""); }
+document.getElementById("enviar").addEventListener("click", function(){
+  var v = function(id){ return document.getElementById(id).value.trim(); };
+  var m = "Hola, quiero pedir un presupuesto.\n" +
+    "Servicio: " + v("tipo") + "\n" +
+    (v("nombre") ? "Nombre: " + v("nombre") + "\n" : "") +
+    "Retiro: " + (v("desde") || "a coordinar") + "\n" +
+    "Entrega: " + (v("hasta") || "a coordinar") + "\n" +
+    (v("det") ? "Detalles: " + v("det") : "");
+  window.open(link(m), "_blank", "noopener");
+});
+</script>
+</body>
+</html>
